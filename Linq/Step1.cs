@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Extensions;
+using System;
 using System.Collections.Generic;
-using Extensions;
 
 namespace Linq
 {
@@ -36,7 +36,8 @@ namespace Linq
             // zodat enkel getallen die deelbaar zijn door 3 worden getoond, maak gebruik van de extension method
             Console.WriteLine("Getallen tussen 1 en 20 deelbaar door 3:");
             for (int i = 1; i <= 20; i++)
-                Console.WriteLine(i);
+                if (i.IsDivisibleBy(3))
+                    Console.WriteLine(i);
 
             Console.WriteLine("Druk op enter om verder te gaan...");
             Console.ReadLine();
